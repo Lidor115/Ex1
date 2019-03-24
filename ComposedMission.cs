@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Excercise_1
 {
+    /*Composed mission*/
     public class ComposedMission : IMission
     {
         private List<func> compList;
