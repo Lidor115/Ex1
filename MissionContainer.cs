@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Excercise_1
 {
@@ -31,13 +29,22 @@ namespace Excercise_1
             }
             set
             {
-                this.dict[key] = value;
+                // check if contains the key and just change the value
+                if (dict.ContainsKey(key))
+                {
+                    dict[key] = value;
+                }
+                //if the key isn't exist - add the key and the value
+                else
+                {
+                    dict.Add(key, value);
+                }
             }
         }
         /*return list of all the mission names (the keys)*/
         public List<string> getAllMissions()
         {
-            return new List<string>(this.dict.Keys);
+            return new List<string>(this.dict.Keys); //return the list with all the keys
         }
 
 
